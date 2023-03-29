@@ -1,0 +1,4 @@
+id;name;type;jhi_order;text;context;question_page_id
+50;QUESTION_CONSENT_1;CHECKBOXES;1;The following activities are mandatory, you cannot participate in the research without agreeing to the following:;;12
+51;QUESTION_CONSENT_2;CHECKBOXES;2;The following activities are optional, you may participate in the research without agreeing to the following:;;12
+52;QUESTION_CONSENT_3;CHECKBOXES;3;Download a copy of your consent:;;12

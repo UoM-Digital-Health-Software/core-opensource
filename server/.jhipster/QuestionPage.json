@@ -1,0 +1,64 @@
+{
+  "name": "QuestionPage",
+  "fields": [
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "order",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "showSkip",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "text",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "questionPage",
+      "relationshipName": "question"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "questionPage",
+      "otherEntityRelationshipName": "questionPage",
+      "relationshipName": "skipPage"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "questionItem",
+      "otherEntityRelationshipName": "questionPage",
+      "relationshipName": "showItem"
+    }
+  ],
+  "entityTableName": "question_page",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210716170936"
+}

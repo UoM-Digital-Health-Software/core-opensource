@@ -1,0 +1,36 @@
+{
+  "name": "AnswerItem",
+  "fields": [
+    {
+      "fieldName": "selected",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "questionItem",
+      "otherEntityRelationshipName": "answerItem",
+      "relationshipValidateRules": "required",
+      "relationshipName": "questionItem"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "answer",
+      "otherEntityRelationshipName": "answerItem",
+      "relationshipValidateRules": "required",
+      "relationshipName": "answer"
+    }
+  ],
+  "entityTableName": "answer_item",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210716170942"
+}

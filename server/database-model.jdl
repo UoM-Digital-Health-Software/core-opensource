@@ -1,0 +1,76 @@
+/* QuestionPage, Question, QuestionItem */
+entity QuestionPage {
+    active Boolean required
+    name String required unique
+    order Integer required
+    showSkip Boolean required
+    title String required
+    text String
+}
+relationship ManyToOne {
+    QuestionPage{skipPage} to QuestionPage
+    QuestionPage{showItem} to QuestionItem
+}
+entity Question {
+    name String required unique
+    type QuestionType required
+    order Integer required
+	text String required
+    context String
+}
+relationship OneToMany {
+    QuestionPage{question} to Question{questionPage required}
+}
+enum QuestionType {
+    CHECKBOXES, RADIO_LINE
+}
+entity QuestionItem {
+    name String required unique
+    order Integer required
+    label String required
+    mandatory Boolean required
+}
+relationship ManyToMany {
+    Question{questionItem} to QuestionItem{question required}
+}
+/* AnswerPage, Answer, AnswerItem */
+entity AnswerPage {
+    skipChosen Boolean required
+    submitted Instant required
+    softwareVersion String required
+}
+relationship ManyToOne {
+    AnswerPage{questionPage required} to QuestionPage
+}
+entity Answer {
+}
+relationship OneToMany {
+    AnswerPage{answer} to Answer{answerPage required}
+}
+relationship ManyToOne {
+    Answer{question required} to Question
+}
+entity AnswerItem {
+    selected Boolean required
+}
+relationship OneToMany {
+    Answer{answerItem} to AnswerItem{answer required}
+}
+relationship ManyToOne {
+    AnswerItem{questionItem required} to QuestionItem
+}
+/* Identity */
+entity Identity {
+    studyId String required
+	participantId String required
+	responseId String required unique
+	machineId String required
+    created Instant required
+    choseExit Boolean required
+}
+relationship OneToMany {
+    Identity{answerPage} to AnswerPage{identity required}
+}
+/* Generation */
+service Identity with serviceImpl
+dto Identity with mapstruct

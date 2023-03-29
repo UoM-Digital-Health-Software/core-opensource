@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Question.
+    -->
+    <changeSet id="20210716170937-1" author="jhipster">
+        <createTable tableName="question">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="ux_question__name" />
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="jhi_order" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="text" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="context" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="question_page_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210716170937-1-relations" author="jhipster">
+
+        <createTable tableName="rel_question__question_item">
+            <column name="question_item_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="question_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="question_id, question_item_id" tableName="rel_question__question_item"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <changeSet id="20210716170937-1-data" author="jhipster" context="server">
+        <loadData
+                  file="config/liquibase/data/question.csv"
+                  separator=";"
+                  tableName="question">
+            <column name="id" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="type" type="string"/>
+            <column name="jhi_order" type="numeric"/>
+            <column name="text" type="string"/>
+            <column name="context" type="string"/>
+            <column name="question_page_id" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/question_question_item.csv"
+            separator=";"
+            tableName="rel_question__question_item">
+            <column name="question_id" type="numeric"/>
+            <column name="question_item_id" type="numeric"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

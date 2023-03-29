@@ -1,0 +1,34 @@
+CORE_1.0.2
+Accesibility review Changes
+Subtitles added to the intro video
+
+CORE_0.0.9
+Changes from Audie
+
+CORE_0.0.8
+Fix PDF for WAR releases.
+
+CORE_0.0.7
+Update questionnaires & questions
+Update intro & make collapsible
+Add PDF download for consent
+Mandatory consent statements
+Add seeking help page
+Improve responsiveness
+
+CORE_0.0.6
+Release for Demo
+
+CORE_0.0.3/4/5
+minor fix
+
+CORE_0.0.2
+Hide & show questions
+Skip & exit buttons
+Show selected pages
+New questionnaires
+Static content pages
+
+CORE_0.0.1
+Initial Release
+Questionnaire, Identity & Answers

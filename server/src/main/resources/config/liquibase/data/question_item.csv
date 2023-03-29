@@ -1,0 +1,18 @@
+id;name;jhi_order;mandatory;label
+# Consent
+#
+49;ITEM_1_CONSENT_1;1;true;I confirm that I have read the participant information for the above study and have had the opportunity to consider the information and ask questions and had these answered satisfactorily.
+50;ITEM_2_CONSENT_1;2;true;I understand that my participation in the study is voluntary and that I am free to withdraw at any time without giving a reason and without detriment to myself.  I understand that it will not be possible to remove my data from the project as it will be non-identifiable and forms part of the data set. I agree to take part on this basis.
+51;ITEM_4_CONSENT_1;4;true;I agree to complete mental health questionnaires for the study. I understand that it is up to me which questionnaires I complete, and I can skip questionnaires if I am not comfortable completing them.
+52;ITEM_5_CONSENT_1;5;true;I understand that my mental health data will be shared with the physical health study team who will be able to link my mental health data to my physical health data using the study ID.
+53;ITEM_6_CONSENT_1;6;true;I agree that any non-identifiable data collected may be included in publications/conference presentations.
+54;ITEM_7_CONSENT_1;7;true;I understand that non-identifiable data collected during the study may be looked at by individuals from The University of Manchester or regulatory authorities, where it is relevant to my taking part in this research. I give permission for these individuals to have access to my non-identifiable data.
+55;ITEM_8_CONSENT_1;8;true;I agree to take part in this study.
+#
+56;ITEM_1_CONSENT_2;1;false;I agree for my non-identifiable data to be shared in the future with NHS staff doing research.
+57;ITEM_2_CONSENT_2;2;false;I agree for my non-identifiable data to be shared in the future with academic institutions doing research.
+58;ITEM_3_CONSENT_2;3;false;I agree for my non-identifiable data to be shared in the future with charities doing research.
+59;ITEM_4_CONSENT_2;4;false;I agree for my non-identifiable data to be shared in the future with not-for-profit companies doing research.
+60;ITEM_5_CONSENT_2;5;false;I agree for my non-identifiable data to be shared in the future with profit-making companies doing research.
+#
+61;ITEM_1_CONSENT_3;1;false;I would like to download a copy of this consent form, after I have given my consent

@@ -1,0 +1,36 @@
+{
+  "name": "Answer",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "answerItem",
+      "otherEntityRelationshipName": "answer",
+      "relationshipName": "answerItem"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "answer",
+      "relationshipValidateRules": "required",
+      "relationshipName": "question"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "answerPage",
+      "otherEntityRelationshipName": "answer",
+      "relationshipValidateRules": "required",
+      "relationshipName": "answerPage"
+    }
+  ],
+  "entityTableName": "answer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210716170941"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "AnswerPage",
+  "fields": [
+    {
+      "fieldName": "skipChosen",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "submitted",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "softwareVersion",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "answer",
+      "otherEntityRelationshipName": "answerPage",
+      "relationshipName": "answer"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "questionPage",
+      "otherEntityRelationshipName": "answerPage",
+      "relationshipValidateRules": "required",
+      "relationshipName": "questionPage"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "identity",
+      "otherEntityRelationshipName": "answerPage",
+      "relationshipValidateRules": "required",
+      "relationshipName": "identity"
+    }
+  ],
+  "entityTableName": "answer_page",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210716170940"
+}

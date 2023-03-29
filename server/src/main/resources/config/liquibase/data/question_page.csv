@@ -1,0 +1,3 @@
+id;active;name;jhi_order;show_skip;skip_page_id;show_item_id;title;text
+1;true;PAGE_STATIC_INTRODUCTION;1;false;;;Introduction;
+12;true;PAGE_QUESTIONNAIRE_CONSENT;3;false;;;Consent;
