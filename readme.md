@@ -1,8 +1,14 @@
 # CORE - Core Mental Health Dataset
 
-The Core Mental Health Dataset is a questionnaire for participants in other research studies.
+A Data Collection Tool for a Core Mental Health Dataset in Physical Health Research Studies
 
-It has several pages of questions, presented in multiple choice format.
+Project Overview
+The overarching aim is to create a seamless and widely acceptable mechanism to collect a common/core set of mental health data (the Core Mental Health Dataset - CMHDS) for all UK physical health study participants so that researchers can analyse the links between physical and mental health.
+
+CMHDS Data Collection Tool
+The Core Mental Health DataSet (CMHDS) Open Source tool enables the collection of mental health data from participants in physical health studies. The CMHDS data collection tool was extensively co-designed with members of the public through a series of workshops.
+
+It has several pages of questions, presented in multiple choice format. Note: for this Open Source release, licensed questionanaires have been removed.
 
 ## Stack 
 ### Front-end
